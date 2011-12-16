@@ -14,8 +14,8 @@ action :create do
     @ttl ||= new_resource.ttl
   end
 
-  def name
-    @name ||= new_resource.name
+  def domain
+    @domain ||= new_resource.domain
   end
 
   def email
@@ -31,7 +31,7 @@ action :create do
 
   def create
     begin
-      dns.zones.create({ :name => name,
+      dns.zones.create({ :domain => domain,
                          :email => email,
                          :type => type,
                          :ttl => ttl })
