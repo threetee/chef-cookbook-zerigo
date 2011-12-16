@@ -8,6 +8,14 @@ Requirements
 
 A Zerigo account.
 
+Installation
+============
+
+1. Install the github cookbooks knife plugin (https://github.com/websterclay/knife-github-cookbooks).
+2. Install the zerigo cookbook:
+
+    $ knife cookbook github install threetee/chef-cookbook-zerigo
+
 Usage
 =====
 
@@ -38,6 +46,6 @@ end
 ```
 
 Credits
-=====
+=======
 
 Inspired by https://github.com/heavywater/community-cookbooks/tree/master/route53.
