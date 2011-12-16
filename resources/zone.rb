@@ -1,6 +1,6 @@
 actions :create
 
-attribute :name,                :kind_of => String
+attribute :name,                  :kind_of => String
 attribute :email,                 :kind_of => String
 attribute :notes,                 :kind_of => String
 attribute :type,                  :kind_of => String,  :default => 'pri_sec'

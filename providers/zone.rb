@@ -14,6 +14,10 @@ action :create do
     @ttl ||= new_resource.ttl
   end
 
+  def name
+    @name ||= new_resource.name
+  end
+  
   def dns
    @dns ||= Fog::DNS.new({ :provider => "Zerigo",
                            :zerigo_email => new_resource.zerigo_email,
