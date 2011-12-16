@@ -14,10 +14,6 @@ action :create do
     @ttl ||= new_resource.ttl
   end
 
-  def domain
-    @domain ||= new_resource.domain
-  end
-
   def email
     @email ||= new_resource.email
   end
@@ -40,12 +36,12 @@ action :create do
     end
   end
 
-  zone = dns.zones.get(name)
+  zone = dns.zones.get(domain)
   
   if zone.nil?
     create
-    Chef::Log.info "Zone created: #{name}"
+    Chef::Log.info "Zone created: #{domain}"
   else
-    Chef::Log.info "Zone already exists, not modifying: #{name}"
+    Chef::Log.info "Zone already exists, not modifying: #{domain}"
   end
 end
