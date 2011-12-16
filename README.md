@@ -36,3 +36,8 @@ zerigo_record "create a record" do
   action :create
 end
 ```
+
+Credits
+=====
+
+Inspired by https://github.com/heavywater/community-cookbooks/tree/master/route53.
