@@ -17,6 +17,10 @@ action :create do
   def name
     @name ||= new_resource.name
   end
+
+  def email
+    @email ||= new_resource.email
+  end
   
   def dns
    @dns ||= Fog::DNS.new({ :provider => "Zerigo",
