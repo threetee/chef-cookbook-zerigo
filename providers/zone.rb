@@ -42,6 +42,6 @@ action :create do
     create
     Chef::Log.info "Zone created: #{domain}"
   else
-    Chef::Log.info "Zone already exists, not modifying: #{domain}"
+    Chef::Log.info "Zone already exists, skipping create: #{domain}"
   end
 end
