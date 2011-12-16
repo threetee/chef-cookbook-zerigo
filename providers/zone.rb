@@ -23,7 +23,7 @@ action :create do
 
   def create
     begin
-      dns.zones.create({ :domain => domain,
+      dns.zones.create({ :name => name,
                          :email => email,
                          :type => type,
                          :ttl => ttl })
@@ -32,7 +32,7 @@ action :create do
     end
   end
 
-  zone = dns.zones.get(domain)
+  zone = dns.zones.get(name)
   
   if zone.nil?
     create
