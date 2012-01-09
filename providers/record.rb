@@ -3,7 +3,7 @@ action :create do
   require "nokogiri"
 
   def name
-    @name ||= new_resource.name + "."
+    @name ||= new_resource.name
   end
 
   def value
