@@ -1,7 +1,7 @@
 Description
 ===========
 
-Provides a LWRP that allows interaction with the Zerigo DNS service.
+Provides LWRPs that allow interaction with the Zerigo DNS service from your chef recipes.
 
 Requirements
 ============
